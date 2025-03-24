@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Гусь</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href="{{url_for('static', filename='main.css')}}">
+</head>
+<body>
+    <div class="top_panel">
+        <p>Создадим магию вашего пространства в ванной для ежедневного комфорта</p>
+        <ul class="contacts">
+            <li><a href="tel: +7(4112)-xx-xx-xx"><img src="{{url_for('static', filename='phone_white.png')}}"/>+7 (4112) xxxxxx</a></li>
+            <li><p>|</p></li>
+            <li><a href="mailto:goose@mail"><img src="{{url_for('static', filename='email_white.png')}}"/>goose@mail</a></li>
+            <li><p>|</p></li>
+            <li style="display: flex; align-items: baseline;">
+                <a href="#login"><img src="{{url_for('static', filename='user_white.png')}}"/>Войдите</a><p style="margin-right: 5px;"> или </p><a href="#register">Зарегистрируйтесь</a>
+            </li>
+        </ul>
+    </div>
+    <div class="nav_bar">
+        <img src="{{url_for('static', filename='logo.png')}}"/>
+        <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#about">О компании</a></li>
+            <li><a href="#category">Каталог</a></li>
+            <li><a href="#buy_and_delivery">Оплата и доставка</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+            <li><a href="#instructions">Инструкции</a></li>
+        </ul>
+    </div>
+    <div class="panel">
+        <div class="catalog_wrapper">
+            <a href="#category">Основные категории</a>
+            <img src="{{url_for('static', filename='down-arrow.png')}}"/>
+        </div>
+        <div class="search_bar">
+            <form>
+                <div class="input">
+                    <input type="text" placeholder="Поиск по каталогу"/>
+                </div>
+            
+            <label>
+                <input type="submit" title="Искать">
+            </label>
+            </form>
+        </div>
+        <div class="cart">
+            <img src="{{url_for('static', filename='shop.png')}}"/>
+            <ul>
+                <li><p>Корзина</p></li>
+                <li><p>пуста</p></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="left_col">
+            <ul class="menu">
+                <li><a href="#hot">Хиты продаж</a></li>
+                <li><a href="#new">Новинки</a></li>
+                <li><a href="#shower_cab">01. Душевые кабины</a></li>
+                <li><a href="#furniture_and_mirrors_for_bathroom">02. Мебель и зеркала для ванных комнат</a></li>
+                <li><a href="#sink">03. Раковины</a></li>
+                <li><a href="#toilet">04. Унитазы</a></li>
+                <li><a href="#toilet_misc">05. Системы инсталляции для унитаза</a></li>
+                <li><a href="#tub">06. Ванны</a></li>
+                <li><a href="#faucet">07. Смесители</a></li>
+                <li><a href="#heated_towel_rail">08. Полотенцесушители</a></li>
+                <li><a href="#boiler">09. Водонагреватели, увлажнители, вентиляторы</a></li>
+                <li><a href="#kitchen_faucet">10. Мойки для кухни</a></li>
+                <li><a href="#accessories_for_bathroom">11. Аксессуары д/ванной комнаты</a></li>
+                <li><a href="#siphon">12. Сифоны, гибкие трубы, отводы</a></li>
+                <li><a href="#radiator">13. Радиаторы</a></li>
+            </ul>
+            <a href="#home">
+                <img src="{{url_for('static', filename='left_col_banner.png')}}"/>
+            </a>
+            <div>
+                <h2>Полезные статьи</h2>
+                <ul>
+                    <li class="news_li">
+                        <a href="#news">
+                            <img class="news_img" src="{{url_for('static', filename='news_1.jpg')}}" />
+                        </a>
+                        <a href="#news">
+                            Как выбрать качественную душевую кабину?
+                        </a>
+                    </li>
+                    <li class="news_li">
+                        <a href="#news">
+                            <img class="news_img" src="{{url_for('static', filename='news_2.jpg')}}" />
+                        </a>
+                        <a href="#news">
+                            Душевые кабины
+                        </a>
+                    </li>
+                </ul>
+                <a href="#news">Читать все статьи</a>
+            </div>
+        </div>
+        <div class="main_catalog">
+            <a href="#home">
+                <img class="main_img" src="{{url_for('static', filename='main_banner.png')}}"/>
+            </a>
+            <ul class="banners">
+                <li class="banners_li">
+                    <img src="{{url_for('static', filename='banner_1.png')}}"/>
+                </li>
+                <li class="banners_li">
+                    <img src="{{url_for('static', filename='banner_2.png')}}"/>
+                </li>
+                <li class="banners_li">
+                    <img src="{{url_for('static', filename='banner_3.png')}}"/>
+                </li>
+            </ul>
+            <div>
+                <h2>Основные категории</h2>
+                <ul class="cats">
+                    <li>
+                        <a href="#shower_cab">
+                            <img src="{{url_for('static', filename='cat_1.jpg')}}" />
+                            <p>01. Душевые кабины</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#furniture_and_mirrors_for_bathroom">
+                            <img src="{{url_for('static', filename='cat_2.jpg')}}" />
+                            <p>02. Мебель и зеркала для ванных комнат</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#sink">
+                            <img src="{{url_for('static', filename='cat_3.jpg')}}" />
+                            <p>03. Раковины</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#toilet">
+                            <img src="{{url_for('static', filename='cat_4.jpg')}}" />
+                            <p>04. Унитазы</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#toilet_misc">
+                            <img src="{{url_for('static', filename='cat_5.jpg')}}" />
+                            <p>05. Системы инсталляции для унитаза</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#tub">
+                            <img src="{{url_for('static', filename='cat_6.jpg')}}" />
+                            <p>06. Ванны</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#faucet">
+                            <img src="{{url_for('static', filename='cat_7.jpg')}}" />
+                            <p>07. Смесители</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#heated_towel_rail">
+                            <img src="{{url_for('static', filename='cat_8.jpg')}}" />
+                            <p>08. Полотенцесушители</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#boiler">
+                            <img src="{{url_for('static', filename='cat_9.jpg')}}" />
+                            <p>09. Водонагреватели, увлажнители, вентиляторы</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#kitchen_faucet">
+                            <img src="{{url_for('static', filename='cat_10.jpg')}}" />
+                            <p>10. Мойки для кухни</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#accessories_for_bathroom">
+                            <img src="{{url_for('static', filename='cat_11.jpg')}}" />
+                            <p>11. Аксессуары д/ванной комнаты</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#siphon">
+                            <img src="{{url_for('static', filename='cat_12.jpg')}}" />
+                            <p>12. Сифоны, гибкие трубы, отводы</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#radiator">
+                            <img src="{{url_for('static', filename='cat_13.jpg')}}" />
+                            <p>13. Радиаторы</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h1>Качественная сантехника и аксессуары для ванных комнат</h1>
+                <p>Ванная комната – это место, где мы очищаем не только дело, но и душу, полноценно отдыхаем и расслабляемся, 
+                    приводим в порядок мысли. Даже если вы являетесь обладателем крошечного санузла в «хрущевке» нужно позаботиться 
+                    о том, чтобы он был функционально оборудован – в нем должно быть все, что нужно не только для проведения обязательных
+                     гигиенических процедур, но и отдыха, и релакса. Качественная сантехника и аксессуары для ванных комнат от проверенных
+                      отечественных и иностранных производителей – это главное предложение компании «Гусь» в РС(Я).
+                       К вашим услугам широкий ассортимент качественной и оригинальной продукции. У нас вы найдете все, что нужно для
+                        оборудования ванной комнаты в городской квартире, загородном коттедже, уютном частном доме, гостиничном номере, 
+                        СПА-центре и т.д. Мы работаем и с оптовыми, и с розничными клиентами, которым предлагаем удобные условия доставки 
+                        и оплаты, оперативную доставку по РС(Я) и в другие регионы РФ, акции и скидки.
+                </p>
+            </div>
+            <div>
+                <h2>Наши предложения</h2>
+                <p>Качественная сантехника и аксессуары для ванных комнат от компании «Гусь» заинтересуют тех, 
+                    кто совсем недавно стал счастливым обладателем нового жилья и в настоящий момент занимается его обустройством.
+                     Нашими постоянными клиентами являются профессиональные дизайнеры интерьеров – в наших каталогах можно 
+                     найти все, что нужно для воплощения в жизнь любой дизайнерской идеи по оформлению ванной комнаты. Мы предлагаем:
+                </p>
+                <ul>
+                    <li>душевые кабины, душевые углы и комплектующие к ним, считающиеся наиболее удачным решением для небольшого 
+                        совмещенного санузла городской «хрущевки», гостиничного номера или спа салона;</li>
+                    <li>зеркала для ванных комнат разной формы и размера, с подсветкой или без нее;</li>
+                    <li>функциональную мебель для ванных комнат – стеллажи, пеналы, тумбы под раковину, навесные полки;</li>
+                    <li>санфаянс всех видов и моделей – всего есть в наличии унитазы, классические и подвесные, в том числе 
+                        и раскомплектованные, бачки, сиденья и системы инсталляции  к ним, а также биде, писсуары, раковины –
+                         на тумбу, на столешницу, на стиральную машину, на пьедестале, крепление и арматуру к ним;</li>
+                    <li>ванны всех видов и моделей – стальные, чугунные акриловые, встроенные и отдельно стоящие, с 
+                        гидромассажером и без него, а также защитные шторки для ванн и экраны из акрила, предупреждающие 
+                        разбрызгивание капель и их оседание на настенные покрытия и санфаянс;</li>
+                    <li>смесители для душа, ванны, писсуара, биде от проверенных производителей и комплектующие к ним;</li>
+                    <li>электрические водонагреватели – накопительные и проточные, ТЭНы и другие комплектующие к ним, а также увлажнители, осушители и очистители воздуха;</li>
+                    <li>радиаторы отопления, конвекторы, полотенцесушители и защитные экраны к нагревательным приборам;</li>
+                    <li>кондиционеры для просторных ванных комнат.</li>
+                </ul>
+                <p>Дополнительно мы предлагаем аксессуары для ванных комнат – милые и полезные вещицы, повышающие наш 
+                    комфорт, к которым относятся корзины для белья, мыльницы, полотенцедержатели, стаканы для зубных щеток и 
+                    многое другое. У нас можно заказать все, что нужно для ремонта и реставрации ванной комнаты, а именно – 
+                    водопроводные и канализационные трубы, подводки, резьбовые соединения, счетчики-водомеры, комплектующие для монтажа теплого пола.
+                </p>
+            </div>
+            <div>
+                <h2>Наши преимущества</h2>
+                <p>В ассортименте компании «Гусь» есть все, что нужно для ремонта, реставрации и 
+                    обустройства ванной комнаты, добавления ей уюта и комфорта, реализации дизайнерских идей. К вашим услугам:
+                </p>
+                <ul>
+                    <li>широкий ассортимент сантехники и аксессуаров для ванных комнат;</li>
+                    <li>удобные условия сотрудничества;</li>
+                    <li>выгодные цены;</li>
+                    <li>гарантии качества и оригинальности на весь товар.</li>
+                </ul>
+                <p>Для своих новых и постоянных клиентов мы регулярно проводим акции – участвующую в них 
+                    продукцию можно купить по сниженной цене. Почаще заходите на наш сайт, чтобы не пропустить скидку на 
+                    интересующий вас товар. Подписывайтесь на рассылку новостей, чтобы всегда быть в курсе происходящих в нашей компании событий.
+                </p>
+            </div>
+            <div>
+                <div class="bottom_cat">
+                    <h2>Хиты продаж</h2>
+                    <a href="#hot">Показать все хиты продаж</a>
+                </div>
+                <ul class="goods">
+                    <li>
+                        <a href="#goods">
+                            <img src="{{url_for('static', filename='hot_1.jpg')}}" />
+                            <div class="goods_inner">
+                                <p class="discount">-10%</p>
+                                <p>Душевая кабина 1000*1000*2150 мм</p>
+                                <div>
+                                    <p class="old">31 510 ₽</p>
+                                    <p>28 359 ₽</p>
+                                </div>
+                                <img class="shop-cart" src="{{url_for('static', filename='shop-cart.png')}}" />
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div class="bottom_cat">
+                    <h2>Новинки</h2>
+                    <a href="#new">Показать все новинки</a>
+                </div>
+                <ul class="goods">
+                    <li>
+                        <a href="#goods">
+                            <img src="{{url_for('static', filename='new_1.jpg')}}" />
+                            <div class="goods_inner">
+                                <p class="discount">-10%</p>
+                                <p>Душевая кабина 900*900*2150 мм</p>
+                                <div>
+                                    <p class="old">38 404 ₽</p>
+                                    <p>34 564 ₽</p>
+                                </div>
+                                <img class="shop-cart" src="{{url_for('static', filename='shop-cart.png')}}" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#goods">
+                            <img src="{{url_for('static', filename='new_2.jpg')}}" />
+                            <div class="goods_inner">
+                                <p class="discount">-14%</p>
+                                <p>Тумба с раковиной подвесная фисташка 900*560*445мм</p>
+                                <div>
+                                    <p class="old">36 054 ₽</p>
+                                    <p>31 006 ₽</p>
+                                </div>
+                                <img class="shop-cart" src="{{url_for('static', filename='shop-cart.png')}}" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#goods">
+                            <img src="{{url_for('static', filename='new_3.jpg')}}" />
+                            <div class="goods_inner">
+                                <p class="discount">-14%</p>
+                                <p>Тумба с раковиной 601*850*455мм</p>
+                                <div>
+                                    <p class="old">30 688 ₽</p>
+                                    <p>26 392 ₽</p>
+                                </div>
+                                <img class="shop-cart" src="{{url_for('static', filename='shop-cart.png')}}" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#goods">
+                            <img src="{{url_for('static', filename='new_4.jpg')}}" />
+                            <div class="goods_inner">
+                                <p class="discount">-14%</p>
+                                <p>Тумба с раковиной подвесная 600*670*470мм</p>
+                                <div>
+                                    <p class="old">23 783 ₽</p>
+                                    <p>20 453 ₽</p>
+                                </div>
+                                <img class="shop-cart" src="{{url_for('static', filename='shop-cart.png')}}" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#goods">
+                            <img src="{{url_for('static', filename='new_5.jpg')}}" />
+                            <div class="goods_inner">
+                                <p class="discount">-10%</p>
+                                <p>Душевая кабина 900*900*2150 мм</p>
+                                <div>
+                                    <p class="old">30 144 ₽</p>
+                                    <p>27 130 ₽</p>
+                                </div>
+                                <img class="shop-cart" src="{{url_for('static', filename='shop-cart.png')}}" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#goods">
+                            <img src="{{url_for('static', filename='new_6.jpg')}}" />
+                            <div class="goods_inner">
+                                <p class="discount">-10%</p>
+                                <p>Душевая кабина 900*900*2150 мм</p>
+                                <div>
+                                    <p class="old">29 452 ₽</p>
+                                    <p>26 507 ₽</p>
+                                </div>
+                                <img class="shop-cart" src="{{url_for('static', filename='shop-cart.png')}}" />
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div class="bottom_cat">
+                    <h2>Товары со скидками</h2>
+                    <a href="#new">Показать все товары со скидками</a>
+                </div>
+                <ul class="goods">
+                    <li>
+                        <a href="#goods">
+                            <img src="{{url_for('static', filename='discount_1.jpg')}}" />
+                            <div class="goods_inner">
+                                <p class="discount">-10%</p>
+                                <p>Душевая кабина 900*900*2150 мм</p>
+                                <div>
+                                    <p class="old">38 835 ₽</p>
+                                    <p>34 952 ₽</p>
+                                </div>
+                                <img class="shop-cart" src="{{url_for('static', filename='shop-cart.png')}}" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#goods">
+                            <img src="{{url_for('static', filename='discount_2.jpg')}}" />
+                            <div class="goods_inner">
+                                <p class="discount">-14%</p>
+                                <p>Душевое ограждение 1200*800*2000мм</p>
+                                <div>
+                                    <p class="old">43 616 ₽</p>
+                                    <p>37 510 ₽</p>
+                                </div>
+                                <img class="shop-cart" src="{{url_for('static', filename='shop-cart.png')}}" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#goods">
+                            <img src="{{url_for('static', filename='discount_3.jpg')}}" />
+                            <div class="goods_inner">
+                                <p class="discount">-14%</p>
+                                <p>Душевой угол 910*900*2000 мм</p>
+                                <div>
+                                    <p class="old">28 289 ₽</p>
+                                    <p>24 329 ₽</p>
+                                </div>
+                                <img class="shop-cart" src="{{url_for('static', filename='shop-cart.png')}}" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#goods">
+                            <img src="{{url_for('static', filename='discount_4.jpg')}}" />
+                            <div class="goods_inner">
+                                <p class="discount">-14%</p>
+                                <p>Душевой угол 900*900*1950 мм</p>
+                                <div>
+                                    <p class="old">16 871 ₽</p>
+                                    <p>14 509 ₽</p>
+                                </div>
+                                <img class="shop-cart" src="{{url_for('static', filename='shop-cart.png')}}" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#goods">
+                            <img src="{{url_for('static', filename='discount_5.jpg')}}" />
+                            <div class="goods_inner">
+                                <p class="discount">-14%</p>
+                                <p>Душевое ограждение 1200*800*2000мм</p>
+                                <div>
+                                    <p class="old">36 327 ₽</p>
+                                    <p>31 241 ₽</p>
+                                </div>
+                                <img class="shop-cart" src="{{url_for('static', filename='shop-cart.png')}}" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#goods">
+                            <img src="{{url_for('static', filename='discount_6.jpg')}}" />
+                                <div class="goods_inner">
+                                    <p class="discount">-14%</p>
+                                    <p>Смеситель для ванны</p>
+                                    <div>
+                                        <p class="old">7 498 ₽</p>
+                                        <p>6 448 ₽</p>
+                                    </div>
+                                <img class="shop-cart" src="{{url_for('static', filename='shop-cart.png')}}" />
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="panel">
+        <ul class="plane_div">
+            <li><img class="plane" src="{{url_for('static', filename='plane_white.png')}}" /></li>
+            <li><h2>Подпишитесь на рассылку</h2></li>
+            <li><p>...и будьте в курсе акций и спецпредложений</p></li>
+        </ul>
+        <div class="search_bar">
+            <form>
+                <div class="input">
+                    <input type="text" placeholder="Укажите E-mail"/>
+                </div>
+            
+            <label>
+                <input type="submit" title="Подписаться">
+            </label>
+            </form>
+        </div>
+    </div>
+    <div class="bottom_panel">
+        <div class="left">
+            <img src="{{url_for('static', filename='logo.png')}}" />
+            <ul>
+                <li>Контакты</li>
+                <li>
+                    <img src="{{url_for('static', filename='phone.png')}}"/>
+                    <a href="#">+7(4112)xxxxxx</a>
+                </li>
+                <li>
+                    <img src="{{url_for('static', filename='plane.png')}}"/>
+                    <a href="#">goose@mail</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <ul>
+                <li>
+                    <ul>
+                        <li><h3>Информация</h3></li>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Оплата и доставка</a></li>
+                        <li><a href="#">Гарантии и возврат</a></li>
+                        <li><a href="#">Статьи</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><h3>Документы</h3></li>
+                        <li><a href="#">Реквизиты</a></li>
+                        <li><a href="#">Обработка персональных данных</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <p>2025–2025 © «Гусь» — Все права НЕ защищены.</p>
+        <ul>
+            <li>Платформа</li>
+            <li><a href="#">uniSiter</a></li>
+        </ul>
+        <div>
+            <img src="{{url_for('static', filename='payment_methods.png')}}"/>
+        </div>
+    </div>
+</body>
+</html>
