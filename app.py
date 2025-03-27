@@ -12,5 +12,13 @@ def home():
 def serve_verification_file():
     return send_from_directory('./src','google31c1584d58f4a544.html')
 
+@app.route('/robots.txt')
+def serve_robots_file():
+    return send_from_directory('./src','robots.txt')
+
+@app.route('/sitemap.xml')
+def serve_sitemap_file():
+    return send_from_directory('./src','sitemap.xml')
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
